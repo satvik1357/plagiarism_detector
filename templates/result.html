@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Similarity Results</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #edf4ff, #d6e4ff);
+            padding: 40px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        h2 {
+            margin-top: 30px;
+            font-weight: bold;
+        }
+        table {
+            margin-top: 15px;
+        }
+        th, td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        {% if show_group_results %}
+        <h2>📦 Group-wise Similarity (Group Size: {{ group_size }})</h2>
+        <table class="table table-bordered table-striped">
+            <thead class="table-light">
+                <tr>
+                    <th>Files</th>
+                    <th>Average Similarity Score (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for result in group_results %}
+                <tr>
+                    <td>{{ result.files | join(', ') }}</td>
+                    <td>{{ result.score }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+
+        <h2>🌐 Overall Similarity (All Files)</h2>
+        <p><strong>Files:</strong> {{ all_files_names | join(', ') }}</p>
+        <p><strong>Average Similarity:</strong> {{ all_avg_score }}%</p>
+
+        <a href="/" class="btn btn-primary mt-4">🔄 Try Again</a>
+    </div>
+</body>
+</html>
