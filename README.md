@@ -158,6 +158,6 @@ Push to the branch (git push origin feature/your-feature).
 Open a Pull Request.
 
 📧 Contact
-For questions or feedback, open an issue or contact [saisatviksunkavalli@gmail.com].
+For questions or feedback, open an issue or contact [your-email@example.com].
 📜 License
 This project is licensed under the MIT License. See the LICENSE file for details.
