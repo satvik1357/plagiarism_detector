@@ -153,7 +153,7 @@ Contributions are welcome! To contribute:
 
 ## 📧 Contact
 
-For questions or feedback, open an issue or contact \[your-email@example.com\].
+For questions or feedback, open an issue or contact (saisatviksunkavalli@gmail.com).
 
 ## 📜 License
 
